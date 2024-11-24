@@ -1,0 +1,101 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "500/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    forces
+    {
+        vector
+        {
+            pressureForce   ( 0.301593 -0.00111254 0.296053 );
+            viscousForce    ( 0.0764855 0.000159036 0.00430696 );
+            internalForce   ( 0 0 0 );
+            pressureMoment  ( 9.3526e-05 -3.02425 -0.011354 );
+            viscousMoment   ( -1.39221e-05 -0.0397778 0.00162516 );
+            internalMoment  ( 0 0 0 );
+        }
+    }
+    solverInfo
+    {
+        scalar
+        {
+            Ux_initial      0.000147886;
+            Ux_final        1.3603e-05;
+            Uy_initial      0.000929679;
+            Uy_final        8.364040000000001e-05;
+            Uz_initial      0.000976224;
+            Uz_final        8.01408e-05;
+            k_initial       0.000139038;
+            k_final         1.30358e-05;
+            omega_initial   7.81133e-06;
+            omega_final     6.44627e-07;
+            p_initial       0.000999757;
+            p_final         9.354730000000001e-06;
+        }
+        label
+        {
+            Ux_iters        8;
+            Uy_iters        8;
+            Uz_iters        8;
+            k_iters         3;
+            omega_iters     3;
+            p_iters         6;
+        }
+    }
+}
+
+cuttingPlane
+{
+    k
+    {
+        file            "<case>/postProcessing/cuttingPlane/500/zNormal_0_05.vtp";
+    }
+    p
+    {
+        file            "<case>/postProcessing/cuttingPlane/500/zNormal_0_05.vtp";
+    }
+    U
+    {
+        file            "<case>/postProcessing/cuttingPlane/500/zNormal_0_05.vtp";
+    }
+    pMean
+    {
+        file            "<case>/postProcessing/cuttingPlane/500/zNormal_0_05.vtp";
+    }
+    UMean
+    {
+        file            "<case>/postProcessing/cuttingPlane/500/zNormal_0_05.vtp";
+    }
+}
+
+fieldAverage
+{
+    U
+    {
+        totalIter       101;
+        totalTime       101;
+    }
+    p
+    {
+        totalIter       101;
+        totalTime       101;
+    }
+}
+
+
+// ************************************************************************* //

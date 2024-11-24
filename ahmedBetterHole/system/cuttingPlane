@@ -1,0 +1,65 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2406                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+cuttingPlane
+{
+    type            surfaces;
+    libs            (sampling);
+    writeControl    writeTime;
+
+    surfaceFormat   vtk;
+    fields          ( p U k pMean UMean kMean);
+
+    interpolationScheme cellPoint;
+
+    surfaces
+    {
+        xNormal
+        {
+            type        cuttingPlane;
+            point       (0.09 0 0);
+            normal      (1 0 0);
+            interpolate true;
+        }
+		
+		yNormal_0
+        {
+            type        cuttingPlane;
+            point       (0 0 0);
+            normal      (0 1 0);
+            interpolate true;
+        }
+		
+		zNormal_0
+        {
+            type        cuttingPlane;
+            point       (0 0 0);
+            normal      (0 0 1);
+            interpolate true;
+        }
+		
+		zNormal_0_1 //roof rack
+        {
+            type        cuttingPlane;
+            point       (0 0 0.1);
+            normal      (0 0 1);
+            interpolate true;
+        }
+		
+		zNormal_0_05 //ahmed body
+        {
+            type        cuttingPlane;
+            point       (0 0 0.05);
+            normal      (0 0 1);
+            interpolate true;
+        }
+    }
+}
+
+
+// ************************************************************************* //

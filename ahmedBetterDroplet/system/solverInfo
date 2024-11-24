@@ -1,0 +1,20 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    The solverInfo function object reports the solver performance information for a list of fields.
+
+\*---------------------------------------------------------------------------*/
+
+solverInfo
+{
+    type            solverInfo;
+    libs            ("libutilityFunctionObjects.so");
+    fields          (U p k omega);
+    writeResidualFields no;
+}
+// ************************************************************************* //

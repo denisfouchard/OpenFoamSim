@@ -1,0 +1,68 @@
+streamLines
+{
+    type    streamLine;
+    libs    (fieldFunctionObjects);
+
+    // Output every
+    writeControl    writeTime;
+    // writeInterval 10;
+
+    setFormat   vtk;
+
+    // Tracking direction (forward | backward | bidirectional)
+    direction   forward;
+
+    // Fields to sample
+    fields      (p U k);
+
+    // Steps particles can travel before being removed
+    lifeTime    10000;
+
+    //- Specify either absolute length of steps (trackLength) or a number
+    //  of subcycling steps per cell (nSubCycle)
+
+    // Size of single track segment [m]
+    //trackLength 1e-3;
+
+    // Number of steps per cell (estimate). Set to 1 to disable subcycling.
+    nSubCycle   5;
+
+    // Cloud name to use
+    cloud       particleTracks;
+
+    // Seeding method.
+    seedSampleSets
+    {
+        // First seed sample set
+        seedSampleSet
+        {
+            type        uniform;
+            axis        x;  //distance;
+            start       (-0.1837 0 -0.0218);
+            end         (-0.1837 0 0.172);
+            nPoints     50;
+        }
+    }
+}
+
+/*
+        // Second seed sample set
+        seedSampleSet
+        {
+            type        uniform;
+            axis        y;  //distance; //for Ahmed body
+            start       (-0.1837 -0.1 0.045);
+            end         (-0.1837 0.1 0.045);
+            nPoints     50;
+        }
+
+        // Third seed sample set
+        seedSampleSet
+        {
+            type        uniform;
+            axis        y;  //distance; //for roof rack
+            start       (-0.1837 -0.1 0.045);
+            end         (-0.1837 0.1 0.045);
+            nPoints     50;
+        }
+*/

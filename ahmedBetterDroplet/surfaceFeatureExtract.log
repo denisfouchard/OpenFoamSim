@@ -1,0 +1,86 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : Nov 22 2024
+Time   : 10:52:42
+Host   : MacBook-Air-de-Denis.local
+PID    : 44244
+I/O    : uncollated
+Case   : /Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : ahmedBody.stl
+Output       : ahmedBody
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 4858 in 1 region(s)
+Vertices     : 2435
+Bounding Box : (-0.0787489 -0.0790837 -0.000260535) (0.21006 0.0284863 0.131413)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 21
+    edges  : 742
+    of which
+        region edges   : 0
+        external edges : 458
+        internal edges : 284
+
+Final Feature set:
+    points : 734
+    of which
+        convex             : 13
+        concave            : 4
+        mixed              : 4
+        non-feature        : 713
+    edges  : 742
+    of which
+        external edges     : 458
+        internal edges     : 284
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody"
+Writing 13 convex feature points to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody_convexFeaturePts.obj"
+Writing 4 concave feature points to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody_concaveFeaturePts.obj"
+Writing 4 mixed feature points to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody_mixedFeaturePts.obj"
+Writing 4 mixed feature point structure to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody_mixedFeaturePtsStructure.obj"
+Writing 458 external edges to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody_externalEdges.obj"
+Writing 284 internal edges to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody_internalEdges.obj"
+Writing 0 flat edges to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody_flatEdges.obj"
+Writing 0 open edges to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody_openEdges.obj"
+Writing 0 multiple edges to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody_multipleEdges.obj"
+Writing 0 region edges to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody_regionEdges.obj"
+Writing 742 edge directions to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/extendedFeatureEdgeMesh/ahmedBody_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/Users/df/Documents/3A/POLI48/OpenFoamSim/ahmedBetterDroplet/constant/triSurface/ahmedBody.eMesh"
+ExecutionTime = 0.02 s  ClockTime = 0 s
+
+End
+
